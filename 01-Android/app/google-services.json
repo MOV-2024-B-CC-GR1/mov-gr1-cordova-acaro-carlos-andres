@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "582863385838",
+    "project_id": "cc-2024b-mov-gr1-caca",
+    "storage_bucket": "cc-2024b-mov-gr1-caca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582863385838:android:b04241125d74fb104defff",
+        "android_client_info": {
+          "package_name": "com.example.ccgr12024b_caca"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMN0izvM0b7EqCohd91vj_0niAdcuYF2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

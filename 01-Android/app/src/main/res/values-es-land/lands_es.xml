@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lands_es_texto">#ff345344</color>
+    <color name="lands_es_fondo">#e7311345</color>
+    <string name="lands_es_texto">LANDS ES</string>
+</resources>
+

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ccgr12024b_caca</string>
+    <string name="texto_prueba">Texto por defecto</string>
+    <string name="port_es_texto">Hola a todos</string>
+    <string name="lands_es_texto">LANDS ES</string>
+    <string name="lands_en_texto">LANDS EN</string>
 </resources>

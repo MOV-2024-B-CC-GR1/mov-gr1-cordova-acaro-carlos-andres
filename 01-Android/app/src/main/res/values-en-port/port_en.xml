@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_letra">#9f6386</color>
+    <color name="color_fondo">#33FF83</color>
+    <string name="texto_prueba">PORT EN</string>
+</resources>

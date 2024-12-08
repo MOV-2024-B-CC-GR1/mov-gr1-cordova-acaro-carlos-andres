@@ -1,97 +1,5 @@
 [
     {
-        "id": 1,
-        "nombre": "Sancocho",
-        "numeroTotalIngredientes": 2,
-        "fechaCreacion": "2024-12-07",
-        "esVegana": false,
-        "costoEstimado": 3.75,
-        "ingredientes": [
-            {
-                "id": 1,
-                "nombre": "Choclo",
-                "cantidad": 5.0,
-                "unidadMedida": "unidades",
-                "esPrincipal": true,
-                "costoUnitario": 0.25,
-                "recetaId": 1
-            },
-            {
-                "id": 2,
-                "nombre": "Carne",
-                "cantidad": 1.0,
-                "unidadMedida": "liibra",
-                "esPrincipal": true,
-                "costoUnitario": 2.5,
-                "recetaId": 1
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "nombre": "Ceviche de Camarón",
-        "numeroTotalIngredientes": 6,
-        "fechaCreacion": "2024-12-07",
-        "esVegana": false,
-        "costoEstimado": 12.6,
-        "ingredientes": [
-            {
-                "id": 1,
-                "nombre": "Camarón",
-                "cantidad": 2.0,
-                "unidadMedida": "libras",
-                "esPrincipal": true,
-                "costoUnitario": 4.5,
-                "recetaId": 2
-            },
-            {
-                "id": 2,
-                "nombre": "Cebolla",
-                "cantidad": 2.0,
-                "unidadMedida": "unidades",
-                "esPrincipal": false,
-                "costoUnitario": 0.3,
-                "recetaId": 2
-            },
-            {
-                "id": 3,
-                "nombre": "Limón",
-                "cantidad": 10.0,
-                "unidadMedida": "unidades",
-                "esPrincipal": true,
-                "costoUnitario": 0.15,
-                "recetaId": 2
-            },
-            {
-                "id": 4,
-                "nombre": "Tomate",
-                "cantidad": 3.0,
-                "unidadMedida": "unidades",
-                "esPrincipal": false,
-                "costoUnitario": 0.25,
-                "recetaId": 2
-            },
-            {
-                "id": 5,
-                "nombre": "Cilantro",
-                "cantidad": 1.0,
-                "unidadMedida": "atado",
-                "esPrincipal": false,
-                "costoUnitario": 0.5,
-                "recetaId": 2
-            },
-            {
-                "id": 6,
-                "nombre": "Culantro",
-                "cantidad": 1.0,
-                "unidadMedida": "atado",
-                "esPrincipal": false,
-                "costoUnitario": 0.25,
-                "recetaId": 2
-            }
-        ]
-    },
-    {
         "id": 5,
         "nombre": "Locro de Papa",
         "numeroTotalIngredientes": 6,
@@ -293,6 +201,179 @@
         ]
     },
     {
+        "id": 2,
+        "nombre": "Ceviche de Camarón",
+        "numeroTotalIngredientes": 9,
+        "fechaCreacion": "2024-12-07",
+        "esVegana": false,
+        "costoEstimado": 17.1,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Camarón",
+                "cantidad": 2.0,
+                "unidadMedida": "libras",
+                "esPrincipal": true,
+                "costoUnitario": 4.5,
+                "recetaId": 2
+            },
+            {
+                "id": 2,
+                "nombre": "Cebolla",
+                "cantidad": 2.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": false,
+                "costoUnitario": 0.3,
+                "recetaId": 2
+            },
+            {
+                "id": 3,
+                "nombre": "Limón",
+                "cantidad": 10.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": true,
+                "costoUnitario": 0.15,
+                "recetaId": 2
+            },
+            {
+                "id": 4,
+                "nombre": "Tomate",
+                "cantidad": 3.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": false,
+                "costoUnitario": 0.25,
+                "recetaId": 2
+            },
+            {
+                "id": 5,
+                "nombre": "Cilantro",
+                "cantidad": 1.0,
+                "unidadMedida": "atado",
+                "esPrincipal": false,
+                "costoUnitario": 0.5,
+                "recetaId": 2
+            },
+            {
+                "id": 6,
+                "nombre": "Ají",
+                "cantidad": 2.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": false,
+                "costoUnitario": 0.1,
+                "recetaId": 2
+            },
+            {
+                "id": 7,
+                "nombre": "Aceite",
+                "cantidad": 0.25,
+                "unidadMedida": "litro",
+                "esPrincipal": false,
+                "costoUnitario": 2.0,
+                "recetaId": 2
+            },
+            {
+                "id": 8,
+                "nombre": "Sal",
+                "cantidad": 0.05,
+                "unidadMedida": "kilo",
+                "esPrincipal": false,
+                "costoUnitario": 1.0,
+                "recetaId": 2
+            },
+            {
+                "id": 9,
+                "nombre": "Cerveza",
+                "cantidad": 2.0,
+                "unidadMedida": "latas",
+                "esPrincipal": true,
+                "costoUnitario": 2.0,
+                "recetaId": 2
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "nombre": "Sancocho",
+        "numeroTotalIngredientes": 8,
+        "fechaCreacion": "2024-12-07",
+        "esVegana": false,
+        "costoEstimado": 7.449999999999999,
+        "ingredientes": [
+            {
+                "id": 1,
+                "nombre": "Choclo",
+                "cantidad": 5.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": true,
+                "costoUnitario": 0.25,
+                "recetaId": 1
+            },
+            {
+                "id": 2,
+                "nombre": "Carne",
+                "cantidad": 1.0,
+                "unidadMedida": "libra",
+                "esPrincipal": true,
+                "costoUnitario": 2.5,
+                "recetaId": 1
+            },
+            {
+                "id": 3,
+                "nombre": "Yuca",
+                "cantidad": 2.0,
+                "unidadMedida": "libras",
+                "esPrincipal": true,
+                "costoUnitario": 0.75,
+                "recetaId": 1
+            },
+            {
+                "id": 4,
+                "nombre": "Zanahoria",
+                "cantidad": 3.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": false,
+                "costoUnitario": 0.25,
+                "recetaId": 1
+            },
+            {
+                "id": 5,
+                "nombre": "Cebolla",
+                "cantidad": 2.0,
+                "unidadMedida": "unidades",
+                "esPrincipal": false,
+                "costoUnitario": 0.3,
+                "recetaId": 1
+            },
+            {
+                "id": 6,
+                "nombre": "Culantro",
+                "cantidad": 3.0,
+                "unidadMedida": "dientes",
+                "esPrincipal": false,
+                "costoUnitario": 0.1,
+                "recetaId": 1
+            },
+            {
+                "id": 7,
+                "nombre": "Cilantro",
+                "cantidad": 1.0,
+                "unidadMedida": "atado",
+                "esPrincipal": false,
+                "costoUnitario": 0.5,
+                "recetaId": 1
+            },
+            {
+                "id": 8,
+                "nombre": "Sal",
+                "cantidad": 0.05,
+                "unidadMedida": "kilo",
+                "esPrincipal": false,
+                "costoUnitario": 1.0,
+                "recetaId": 1
+            }
+        ]
+    },
+    {
         "id": 6,
         "nombre": "Cazuela de Mariscos",
         "numeroTotalIngredientes": 9,
@@ -374,7 +455,7 @@
             },
             {
                 "id": 9,
-                "nombre": "Crema de Leche",
+                "nombre": "Crema",
                 "cantidad": 0.5,
                 "unidadMedida": "litro",
                 "esPrincipal": false,

@@ -58,15 +58,21 @@ object FileManager {
     // Métodos para Ingredientes
     fun guardarIngrediente(ingrediente: Ingrediente) {
         val ingredientes = cargarIngredientes().toMutableList()
+
+        // Obtener solo los ingredientes de la receta actual
         val ingredientesReceta = ingredientes.filter { it.recetaId == ingrediente.recetaId }
 
         if (ingrediente.id == 0) {
-            // Asignar el siguiente ID disponible para esta receta específica
-            ingrediente.id = (ingredientesReceta.maxOfOrNull { it.id } ?: 0) + 1
+            // Para nuevo ingrediente, encontrar el máximo ID dentro de la receta actual
+            val maxIdEnReceta = ingredientesReceta.maxOfOrNull { it.id } ?: 0
+            ingrediente.id = maxIdEnReceta + 1
         } else {
-            // Si es una actualización, mantener el mismo ID pero eliminar el anterior
-            ingredientes.removeIf { it.id == ingrediente.id && it.recetaId == ingrediente.recetaId }
+            // Para actualización, eliminar el ingrediente anterior de la misma receta
+            ingredientes.removeIf {
+                it.id == ingrediente.id && it.recetaId == ingrediente.recetaId
+            }
         }
+
         ingredientes.add(ingrediente)
         File(INGREDIENTES_FILE).writeText(json.encodeToString(ingredientes))
     }
@@ -85,46 +91,25 @@ object FileManager {
     fun obtenerIngredientesDeReceta(recetaId: Int): List<Ingrediente> {
         return cargarIngredientes()
             .filter { it.recetaId == recetaId }
-            .sortedBy { it.id }  // Asegurar que se muestren en orden por ID
+            .sortedBy { it.id }
     }
 
-    fun eliminarIngrediente(id: Int) {
+    fun eliminarIngrediente(id: Int, recetaId: Int) {  // Modificado para incluir recetaId
         val ingredientes = cargarIngredientes().toMutableList()
-        val ingredienteAEliminar = ingredientes.find { it.id == id }
 
-        if (ingredienteAEliminar != null) {
-            val recetaId = ingredienteAEliminar.recetaId
-            // Eliminar el ingrediente
-            ingredientes.removeIf { it.id == id }
+        // Eliminar el ingrediente específico de la receta
+        ingredientes.removeIf { it.id == id && it.recetaId == recetaId }
 
-            // Reindexar los ingredientes restantes de la misma receta
-            val ingredientesReceta = ingredientes
-                .filter { it.recetaId == recetaId }
-                .sortedBy { it.id }
-                .mapIndexed { index, ingr ->
-                    ingr.copy(id = index + 1)
-                }
-
-            // Actualizar la lista completa
-            ingredientes.removeIf { it.recetaId == recetaId }
-            ingredientes.addAll(ingredientesReceta)
-
-            File(INGREDIENTES_FILE).writeText(json.encodeToString(ingredientes))
-        }
-    }
-
-    fun reindexarIngredientesDeReceta(recetaId: Int) {
-        val ingredientes = cargarIngredientes().toMutableList()
-        val otrosIngredientes = ingredientes.filter { it.recetaId != recetaId }
+        // Reindexar los ingredientes de la receta afectada
         val ingredientesReceta = ingredientes
             .filter { it.recetaId == recetaId }
             .sortedBy { it.id }
-            .mapIndexed { index, ingrediente ->
-                ingrediente.copy(id = index + 1)
+            .mapIndexed { index, ingr ->
+                ingr.copy(id = index + 1)
             }
 
-        ingredientes.clear()
-        ingredientes.addAll(otrosIngredientes)
+        // Actualizar la lista completa
+        ingredientes.removeIf { it.recetaId == recetaId }
         ingredientes.addAll(ingredientesReceta)
 
         File(INGREDIENTES_FILE).writeText(json.encodeToString(ingredientes))

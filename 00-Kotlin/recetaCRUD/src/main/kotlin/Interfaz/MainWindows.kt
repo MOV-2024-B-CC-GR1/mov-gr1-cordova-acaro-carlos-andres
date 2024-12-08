@@ -177,17 +177,6 @@ class MainWindow : JFrame() {
         }
     }
 
-    private fun updateRecipeDetailsPanel(receta: Receta) {
-        val detallesPanel = (contentPane.getComponent(0) as JSplitPane)
-            .rightComponent as JPanel
-        val panelSuperior = detallesPanel.getComponent(0) as JPanel
-
-        panelSuperior.removeAll()
-        panelSuperior.add(createRecipeInfoPanel(receta))
-        panelSuperior.revalidate()
-        panelSuperior.repaint()
-    }
-
     private fun createRecipeInfoPanel(receta: Receta): JPanel {
         return JPanel(GridBagLayout()).apply {
             border = BorderFactory.createTitledBorder("Detalles de la Receta")
@@ -447,9 +436,11 @@ class MainWindow : JFrame() {
         val selectedRow = ingredientesTable.selectedRow
         if (selectedRow >= 0) {
             val ingredienteId = ingredientesTable.getValueAt(selectedRow, 0) as Int
-            FileManager.cargarIngredientes()
-                .find { it.id == ingredienteId }
-                ?.let { showIngredientDialog(it) }
+            recetaActual?.let { receta ->
+                FileManager.cargarIngredientes()
+                    .find { it.id == ingredienteId && it.recetaId == receta.id }
+                    ?.let { showIngredientDialog(it) }
+            }
         } else {
             JOptionPane.showMessageDialog(this, "Por favor, seleccione un ingrediente para editar")
         }
@@ -468,9 +459,11 @@ class MainWindow : JFrame() {
         val selectedRow = ingredientesTable.selectedRow
         if (selectedRow >= 0) {
             val ingredienteId = ingredientesTable.getValueAt(selectedRow, 0) as Int
-            if (confirmDeletion("¿Está seguro de eliminar este ingrediente?")) {
-                FileManager.eliminarIngrediente(ingredienteId)
-                recetaActual?.let { receta ->
+            recetaActual?.let { receta ->
+                if (confirmDeletion("¿Está seguro de eliminar este ingrediente?")) {
+                    // Pasar tanto el ID del ingrediente como el ID de la receta
+                    FileManager.eliminarIngrediente(ingredienteId, receta.id)
+
                     // Actualizar la lista de ingredientes después de eliminar
                     receta.ingredientes = FileManager.obtenerIngredientesDeReceta(receta.id).toMutableList()
                     // Recalcular totales
@@ -486,6 +479,7 @@ class MainWindow : JFrame() {
             JOptionPane.showMessageDialog(this, "Por favor, seleccione un ingrediente para eliminar")
         }
     }
+
 
     private fun confirmDeletion(message: String): Boolean {
         return JOptionPane.showConfirmDialog(

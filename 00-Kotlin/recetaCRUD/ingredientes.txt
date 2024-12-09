@@ -1,69 +1,6 @@
 [
     {
         "id": 1,
-        "nombre": "Choclo",
-        "cantidad": 5.0,
-        "unidadMedida": "unidades",
-        "esPrincipal": true,
-        "costoUnitario": 0.25,
-        "recetaId": 1
-    },
-    {
-        "id": 2,
-        "nombre": "Carne",
-        "cantidad": 1.0,
-        "unidadMedida": "libra",
-        "esPrincipal": true,
-        "costoUnitario": 2.5,
-        "recetaId": 1
-    },
-    {
-        "id": 3,
-        "nombre": "Yuca",
-        "cantidad": 2.0,
-        "unidadMedida": "libras",
-        "esPrincipal": true,
-        "costoUnitario": 0.75,
-        "recetaId": 1
-    },
-    {
-        "id": 4,
-        "nombre": "Zanahoria",
-        "cantidad": 3.0,
-        "unidadMedida": "unidades",
-        "esPrincipal": false,
-        "costoUnitario": 0.25,
-        "recetaId": 1
-    },
-    {
-        "id": 5,
-        "nombre": "Cebolla",
-        "cantidad": 2.0,
-        "unidadMedida": "unidades",
-        "esPrincipal": false,
-        "costoUnitario": 0.3,
-        "recetaId": 1
-    },
-    {
-        "id": 7,
-        "nombre": "Cilantro",
-        "cantidad": 1.0,
-        "unidadMedida": "atado",
-        "esPrincipal": false,
-        "costoUnitario": 0.5,
-        "recetaId": 1
-    },
-    {
-        "id": 8,
-        "nombre": "Sal",
-        "cantidad": 0.05,
-        "unidadMedida": "kilo",
-        "esPrincipal": false,
-        "costoUnitario": 1.0,
-        "recetaId": 1
-    },
-    {
-        "id": 1,
         "nombre": "Camarón",
         "cantidad": 2.0,
         "unidadMedida": "libras",
@@ -253,60 +190,6 @@
     },
     {
         "id": 1,
-        "nombre": "Papas",
-        "cantidad": 4.0,
-        "unidadMedida": "libras",
-        "esPrincipal": true,
-        "costoUnitario": 0.8,
-        "recetaId": 5
-    },
-    {
-        "id": 2,
-        "nombre": "Queso",
-        "cantidad": 0.5,
-        "unidadMedida": "libra",
-        "esPrincipal": true,
-        "costoUnitario": 2.5,
-        "recetaId": 5
-    },
-    {
-        "id": 3,
-        "nombre": "Leche",
-        "cantidad": 1.0,
-        "unidadMedida": "litro",
-        "esPrincipal": false,
-        "costoUnitario": 1.0,
-        "recetaId": 5
-    },
-    {
-        "id": 4,
-        "nombre": "Aguacate",
-        "cantidad": 2.0,
-        "unidadMedida": "unidades",
-        "esPrincipal": false,
-        "costoUnitario": 0.75,
-        "recetaId": 5
-    },
-    {
-        "id": 5,
-        "nombre": "Cebolla Blanca",
-        "cantidad": 2.0,
-        "unidadMedida": "unidades",
-        "esPrincipal": false,
-        "costoUnitario": 0.25,
-        "recetaId": 5
-    },
-    {
-        "id": 6,
-        "nombre": "Sal",
-        "cantidad": 0.05,
-        "unidadMedida": "kilo",
-        "esPrincipal": false,
-        "costoUnitario": 1.0,
-        "recetaId": 5
-    },
-    {
-        "id": 1,
         "nombre": "Pescado",
         "cantidad": 2.0,
         "unidadMedida": "libras",
@@ -387,15 +270,6 @@
         "recetaId": 2
     },
     {
-        "id": 6,
-        "nombre": "Culantro",
-        "cantidad": 3.0,
-        "unidadMedida": "dientes",
-        "esPrincipal": false,
-        "costoUnitario": 0.1,
-        "recetaId": 1
-    },
-    {
         "id": 9,
         "nombre": "Crema",
         "cantidad": 0.5,
@@ -403,5 +277,50 @@
         "esPrincipal": false,
         "costoUnitario": 2.0,
         "recetaId": 6
+    },
+    {
+        "id": 1,
+        "nombre": "Papas",
+        "cantidad": 2.0,
+        "unidadMedida": "libras",
+        "esPrincipal": true,
+        "costoUnitario": 0.75,
+        "recetaId": 5
+    },
+    {
+        "id": 2,
+        "nombre": "Queso",
+        "cantidad": 0.5,
+        "unidadMedida": "libra",
+        "esPrincipal": true,
+        "costoUnitario": 2.5,
+        "recetaId": 5
+    },
+    {
+        "id": 3,
+        "nombre": "Aguacate",
+        "cantidad": 2.0,
+        "unidadMedida": "unidades",
+        "esPrincipal": false,
+        "costoUnitario": 0.75,
+        "recetaId": 5
+    },
+    {
+        "id": 4,
+        "nombre": "Cebolla Blanca",
+        "cantidad": 2.0,
+        "unidadMedida": "unidades",
+        "esPrincipal": false,
+        "costoUnitario": 0.25,
+        "recetaId": 5
+    },
+    {
+        "id": 5,
+        "nombre": "Sal",
+        "cantidad": 0.05,
+        "unidadMedida": "kilo",
+        "esPrincipal": false,
+        "costoUnitario": 1.0,
+        "recetaId": 5
     }
 ]

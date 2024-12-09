@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
     <color name="color_letra">#2bdfbc</color>
     <color name="color_fondo">#33FF83</color>
     <color name="port_es_letra">#ff5733</color>

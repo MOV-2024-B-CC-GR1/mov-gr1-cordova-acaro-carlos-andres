@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Ccgr12024b_caca"
         tools:targetApi="31">
         <activity
+            android:name=".BListView"
+            android:exported="false" />
+        <activity
+            android:name=".ACicloVida"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
